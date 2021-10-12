@@ -48,7 +48,7 @@ class Bicycle
     
     public function setCurrentSpeed(int $currentSpeed): void
     {
-        $this->currentSpeed = $currentSpeed;
+        
         if($currentSpeed >= 0) {
             $this->currentSpeed = $currentSpeed;
         }
@@ -109,7 +109,7 @@ public function forward(): string
     
     public function setCurrentSpeed(int $currentSpeed): void
     {
-        $this->currentSpeed = $currentSpeed;
+        
         if($currentSpeed >= 0) {
             $this->currentSpeed = $currentSpeed;
         }
