@@ -4,13 +4,13 @@ require_once 'Vehicle.php';
 class Bicycle extends Vehicle
 {  
 
-    private string $color;
+    protected string $color;
 
-    private int $currentSpeed;
+    protected int $currentSpeed;
 
-    private int $nbSeats = 1;
+    protected int $nbSeats = 1;
 
-    private int $nbWheels = 2;
+    protected int $nbWheels = 2;
     
     public function __construct(string $color)
     {

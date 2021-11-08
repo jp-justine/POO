@@ -4,6 +4,10 @@ require_once 'Bicycle.php';
 require_once 'Vehicle.php';
 require_once 'Car.php';
 require_once 'Camion.php';
+require_once 'HighWay.php';
+require_once 'MotorWay.php';
+require_once 'ResidentialWay.php';
+require_once 'PedestrianWay.php';
 
 
 $bicycle = new Bicycle('blue', 1);
@@ -37,21 +41,20 @@ $camion = new Camion('blue',4,10,5);
 echo $camion->forward();
 var_dump($camion);
 
-// $camion->setCurrentSpeed(15);
-// $camion->setStockage(10);
 
 echo $camion->forward();
 echo '<br> Vitesse de camion : ' . $camion->getCurrentSpeed() . ' km/h' . '<br>';
 echo $camion->brake();
 echo '<br> Vitesse de camion : ' . $camion->getCurrentSpeed() . ' km/h' . '<br>';
 
-// $truck = new Camion('blue',8,'electricity');
-// echo $truck->forward();
-// var_dump($truck);
+$motor = new MotorWay(4, 130);
+$pedestrian = new PedestrianWay(1, 10);
+$residential = new ResidentialWay(2, 50);
 
-// $truck->setCurrentSpeed(15);
+$voiture = new Car("blue", 5, "fuel");
+$bike = new Bicycle("blue", 1);
 
-// echo $truck->forward();
-// echo '<br> Vitesse de truck : ' . $truck->getCurrentSpeed() . ' km/h' . '<br>';
-// echo $truck->brake();
-// echo '<br> Vitesse de truck : ' . $truck->getCurrentSpeed() . ' km/h' . '<br>';
+echo '</br>';
+echo '</br>';
+
+echo $motor->addVehicle($voiture);
